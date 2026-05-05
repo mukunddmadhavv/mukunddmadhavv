@@ -45,11 +45,26 @@ I'm currently building products at the **intersection of tech & startups** — f
 
 ## 📊 GitHub Stats
 
-![Mukund's GitHub stats](https://github-readme-stats.vercel.app/api?username=mukunddmadhavv&show_icons=true&theme=dark&hide_border=true&cache_seconds=1800)
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=mukunddmadhavv&show_icons=true&theme=dark&hide_border=true&count_private=true&include_all_commits=true" width="48%" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=mukunddmadhavv&layout=compact&theme=dark&hide_border=true" width="48%" />
+</p>
 
-![GitHub Streak](https://streak-stats.demolab.com/?user=mukunddmadhavv&theme=dark&hide_border=true)
+<p align="center">
+  <img src="https://streak-stats.demolab.com/?user=mukunddmadhavv&theme=dark&hide_border=true" width="60%" />
+</p>
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=mukunddmadhavv&layout=compact&theme=dark&hide_border=true&cache_seconds=1800)
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=mukunddmadhavv&theme=github-compact&hide_border=true&area=true" width="98%" />
+</p>
+
+---
+
+## 🏆 GitHub Trophies
+
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=mukunddmadhavv&theme=darkhub&no-frame=true&no-bg=true&margin-w=4&row=1" />
+</p>
 
 ---
 
@@ -71,4 +86,6 @@ I think in systems, not just code. I optimize for impact, not syntax.
 
 ## 👀 Profile Views
 
-![Profile Views](https://komarev.com/ghpvc/?username=mukunddmadhavv&label=Profile%20Views&color=0e75b6&style=flat)
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=mukunddmadhavv&label=Profile%20Views&color=0e75b6&style=flat" />
+</p>
