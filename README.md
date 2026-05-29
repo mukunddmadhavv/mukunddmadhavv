@@ -4,6 +4,7 @@
 
 I'm currently building products at the **intersection of tech & startups** — focused on scalable backend systems, AI integrations, and shipping things that matter. Check out what I'm working on:
 
+- 🐦‍🔥 [**trypitch.co**](https://latents.in)
 - 🌐 [**latents.in**](https://latents.in)
 - 🚀 [**preneurx.in**](https://preneurx.in)
 
