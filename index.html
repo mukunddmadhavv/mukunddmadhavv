@@ -34,17 +34,14 @@
 
 
 
-<body class="bg-[black] dark:bg-[white] flex flex-col content-center  flex-wrap ">
+<body class="bg-[black] dark:bg-[white]">
+    <div class="flex flex-col w-full max-w-[800px] md:mx-auto">
 
-
-    <div class="flex flex-row justify-between  px-[0px] pt-[20px] mb-[50px]">
+        <div class="flex flex-row justify-between  px-[0px] pt-[20px] mb-[50px]">
 
         <div class="flex justify-start ml-[15px] md:ml-[0px]  gap-[5px]">
             <p class="text-[#575760]">[h]
             <p class="dark:text-[black] dark:hover:text-[#c5c5c9] mr-[5px] text-[#575760] hover:text-white">home</p>
-            </p>
-            <p class="text-[#575760]">[b]
-            <p class="dark:text-[black] dark:hover:text-[#c5c5c9] mr-[5px] text-[#575760] hover:text-white">blog</p>
             </p>
         </div>
 
@@ -56,30 +53,30 @@
         </div>
     </div>
 
-    <div class="flex flex-row items-center ml-[15px] md:ml-[0px] items-start justify-start ">
+    <div class="flex flex-row items-center ml-[15px] md:ml-[0px] mr-[15px] md:mr-0 justify-start">
         <img src="./mukund.png" class="w-[70px] justify-start rounded-2xl mr-[20px]" alt="dp">
 
         <div class=" flex flex-col justify-around ">
             <p class="dark:text-[black] text-[20px] md:text-[30px] text-white">
                 mukund madhav tiwari
             </p>
-            <p class="text-[15px] text-[#575760]">19 y/o</p>
+            <p class="text-[15px] text-[#575760]" id="age-display">19 y/o</p>
 
         </div>
     </div>
 
     <div class="flex flex-row mt-[15px] ml-[15px] md:ml-[0px]">
         <p class="text-[#9d9da7]">currently working at @</p>
-        <a href="https://latents.in" target="_blank" class="text-[#00d492] ml-[4px]">latents.in</a>
+        <a href="https://trypitch.co" target="_blank" class="text-[#00d492] ml-[4px]">trypitch.co</a>
     </div>
 
     <div class="flex flex-row mt-[5px] ml-[15px] md:ml-[0px]">
         <p class="text-[#9d9da7]">prev. co-founded @</p>
-        <a href="https://preneurx.in" target="_blank" class="text-[#886cd3] ml-[4px]">preneurx.in</a>
+        <a href="https://preneurx.netlify.app" target="_blank" class="text-[#886cd3] ml-[4px]">preneurx</a>
     </div>
 
 
-    <div class="flex flex-row justify-start mt-5 ml-[15px] md:ml-[0px] ">
+    <div class="flex flex-row justify-start mt-5 ml-[15px] md:ml-[0px] mr-[15px] md:mr-0">
 
         <p class="border-l-[2px] border-[#575760]"></p>
         <p class="ml-[15px] text-[#575760]">
@@ -96,17 +93,78 @@
 
 
     </div>
-    <div class="flex flex-row mt-[20px] ml-[15px] md:ml-[0px]">
+    <div class="flex flex-row mt-[30px] ml-[15px] md:ml-[0px] mb-[15px]">
         <p class="text-[#575760]">
             projects @
             <a href="https://github.com/mukunddmadhavv" target="_blank"
-                class="dark:text-[black] text-[#c5c5c9] ml-[3px] hover:text-white">github</a>
-        <p class="text-[#575760]">↗</p>
-
+                class="dark:text-[black] text-[#c5c5c9] ml-[3px] hover:text-white">github ↗</a>
         </p>
     </div>
 
-    <div class="flex flex-wrap flex-col md:flex-row mt-[10px] ml-[15px] md:ml-[0px]">
+    <div class="border border-[#222225] dark:border-gray-300 rounded-[8px] p-[15px] ml-[15px] md:ml-[0px] mr-[15px] md:mr-0 max-w-[900px] bg-transparent">
+        <p class="text-[#575760] mb-[15px] tracking-widest text-[13px] uppercase">Recent Projects</p>
+        
+        <div class="flex flex-col gap-[20px] md:gap-[12px]">
+            <a href="https://trypitch.co" target="_blank" class="flex flex-col group gap-[4px] md:gap-0 md:flex-row md:items-center justify-between">
+                <div class="flex flex-row items-center justify-between w-full md:w-auto text-[15px] text-[#575760]">
+                    <div class="flex flex-row items-center">
+                        <span class="w-[30px] shrink-0 hidden md:inline-block">01</span>
+                        <span class="w-[8px] h-[8px] rounded-full bg-[#00d492] shrink-0 mr-[12px]"></span>
+                        <span class="shrink-0 group-hover:underline text-[#3b82f6]">trypitch.co</span>
+                        <span class="mx-[10px] hidden md:inline shrink-0">|</span>
+                        <span class="hidden md:inline">an AI automated pitch generation platform.</span>
+                    </div>
+                    <div class="shrink-0 md:hidden">
+                        <span class="px-[10px] py-[3px] text-[13px] border border-[#00d492]/30 text-[#00d492] rounded-[4px] bg-[#00d492]/10 leading-none">done</span>
+                    </div>
+                </div>
+                <span class="text-[#575760] md:hidden ml-[20px] text-[15px] pr-[15px] leading-relaxed">an AI automated pitch generation platform.</span>
+                <div class="shrink-0 hidden md:block ml-[10px]">
+                    <span class="px-[10px] py-[3px] text-[13px] border border-[#00d492]/30 text-[#00d492] rounded-[4px] bg-[#00d492]/10 leading-none">done</span>
+                </div>
+            </a>
+
+            <a href="https://latents.in" target="_blank" class="flex flex-col group gap-[4px] md:gap-0 md:flex-row md:items-center justify-between">
+                <div class="flex flex-row items-center justify-between w-full md:w-auto text-[15px] text-[#575760]">
+                    <div class="flex flex-row items-center">
+                        <span class="w-[30px] shrink-0 hidden md:inline-block">02</span>
+                        <span class="w-[8px] h-[8px] rounded-full bg-[#00d492] shrink-0 mr-[12px]"></span>
+                        <span class="shrink-0 group-hover:underline text-[#886cd3]">latents.in</span>
+                        <span class="mx-[10px] hidden md:inline shrink-0">|</span>
+                        <span class="hidden md:inline">an agent which submit forms for you.</span>
+                    </div>
+                    <div class="shrink-0 md:hidden">
+                        <span class="px-[10px] py-[3px] text-[13px] border border-[#00d492]/30 text-[#00d492] rounded-[4px] bg-[#00d492]/10 leading-none">done</span>
+                    </div>
+                </div>
+                <span class="text-[#575760] md:hidden ml-[20px] text-[15px] pr-[15px] leading-relaxed">an agent which submit forms for you.</span>
+                <div class="shrink-0 hidden md:block ml-[10px]">
+                    <span class="px-[10px] py-[3px] text-[13px] border border-[#00d492]/30 text-[#00d492] rounded-[4px] bg-[#00d492]/10 leading-none">done</span>
+                </div>
+            </a>
+
+            <a href="https://instagram.com/trypitch.co" target="_blank" class="flex flex-col group gap-[4px] md:gap-0 md:flex-row md:items-center justify-between">
+                <div class="flex flex-row items-center justify-between w-full md:w-auto text-[15px] text-[#575760]">
+                    <div class="flex flex-row items-center">
+                        <span class="w-[30px] shrink-0 hidden md:inline-block">03</span>
+                        <span class="w-[8px] h-[8px] rounded-full bg-[#00d492] shrink-0 mr-[12px]"></span>
+                        <span class="shrink-0 group-hover:underline text-[#ec4899]">instagram automation</span>
+                        <span class="mx-[10px] hidden md:inline shrink-0">|</span>
+                        <span class="hidden md:inline">20k+ followers & 3m+ views in &lt;3 weeks.</span>
+                    </div>
+                    <div class="shrink-0 md:hidden">
+                        <span class="px-[10px] py-[3px] text-[13px] border border-[#00d492]/30 text-[#00d492] rounded-[4px] bg-[#00d492]/10 leading-none">done</span>
+                    </div>
+                </div>
+                <span class="text-[#575760] md:hidden ml-[20px] text-[15px] pr-[15px] leading-relaxed">20k+ followers & 3m+ views in &lt;3 weeks.</span>
+                <div class="shrink-0 hidden md:block ml-[10px]">
+                    <span class="px-[10px] py-[3px] text-[13px] border border-[#00d492]/30 text-[#00d492] rounded-[4px] bg-[#00d492]/10 leading-none">done</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="flex flex-wrap flex-col md:flex-row mt-[10px] ml-[15px] md:ml-[0px] mr-[15px] md:mr-0 mb-[30px] gap-[10px] md:gap-0">
         <a href="mailto:mukunddmadhavv@gmail.com">
             <button class="flex flex-row ">
                 <p class="text-[#575760]">[e]</p>
@@ -138,9 +196,65 @@
     </div>
     <script>
         function toggleDark() {
-            document.documentElement.classList.toggle("dark");
+            const isDark = document.documentElement.classList.toggle("dark");
+            localStorage.setItem("theme", isDark ? "dark" : "light");
         }
+
+        // Initialize theme from local storage
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "dark") {
+            document.documentElement.classList.add("dark");
+        } else if (savedTheme === "light") {
+            document.documentElement.classList.remove("dark");
+        }
+
+        // Calculate age dynamically based on August 20, 2006
+        function calculateAge(birthDateString) {
+            const today = new Date();
+            const birthDate = new Date(birthDateString);
+            let age = today.getFullYear() - birthDate.getFullYear();
+            const m = today.getMonth() - birthDate.getMonth();
+            if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
+            return age;
+        }
+
+        // Set age on DOM load and add keyboard shortcuts
+        document.addEventListener("DOMContentLoaded", () => {
+            const age = calculateAge("2006-08-20");
+            const ageDisplay = document.getElementById("age-display");
+            if (ageDisplay) {
+                ageDisplay.textContent = `${age} y/o`;
+            }
+        });
+
+        // Keyboard shortcuts
+        document.addEventListener("keydown", (e) => {
+            // Ignore if typing in an input field (none on this page, but good practice)
+            if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") return;
+
+            const key = e.key.toLowerCase();
+            
+            // Allow default behaviors for modifiers (Ctrl/Cmd/Alt)
+            if (e.ctrlKey || e.metaKey || e.altKey) return;
+
+            if (key === 't') {
+                toggleDark();
+            } else if (key === 'h') {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else if (key === 'e') {
+                window.location.href = 'mailto:mukunddmadhavv@gmail.com';
+            } else if (key === 'x') {
+                window.open('https://x.com/mukunddmadhavv', '_blank');
+            } else if (key === 'l') {
+                window.open('https://www.linkedin.com/in/mukund-madhav-tiwari', '_blank');
+            } else if (key === 'c') {
+                window.open('https://leetcode.com/mukunddmadhavv', '_blank');
+            }
+        });
     </script>
+    </div>
 </body>
 
 </html>
