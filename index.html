@@ -57,6 +57,26 @@
     .dark .contribution-day[data-level="2"] { background: #40c463; }
     .dark .contribution-day[data-level="3"] { background: #30a14e; }
     .dark .contribution-day[data-level="4"] { background: #216e39; }
+
+    button.contribution-day { cursor: pointer; padding: 0; border: 0; }
+    button.contribution-day:focus-visible { outline: 2px solid #00d492; outline-offset: 2px; }
+
+    #contribution-tooltip {
+        position: fixed;
+        z-index: 50;
+        pointer-events: none;
+        max-width: calc(100vw - 16px);
+        padding: 8px 12px;
+        border: 1px solid #30363d;
+        border-radius: 6px;
+        background: #161b22;
+        color: #f0f6fc;
+        font-size: 12px;
+        line-height: 18px;
+        box-shadow: 0 4px 12px #0003;
+    }
+
+    .dark #contribution-tooltip { background: #fff; color: #24292f; border-color: #d0d7de; }
 </style>
 
 
@@ -120,21 +140,13 @@
 
 
     </div>
-    <div class="flex flex-row mt-[30px] ml-[15px] md:ml-[0px] mb-[15px]">
-        <p class="text-[#575760]">
-            projects @
-            <a href="https://github.com/mukunddmadhavv" target="_blank"
-                class="dark:text-[black] text-[#c5c5c9] ml-[3px] hover:text-white">github ↗</a>
-        </p>
-    </div>
-
-    <section aria-label="GitHub contributions" class="border border-[#222225] dark:border-gray-300 rounded-[8px] p-[15px] ml-[15px] md:ml-0 mr-[15px] md:mr-0 mb-[15px]">
+    <section aria-label="GitHub contributions" class="border border-[#222225] dark:border-gray-300 rounded-[8px] p-[15px] mt-[30px] ml-[15px] md:ml-0 mr-[15px] md:mr-0 mb-[15px]">
         <p id="contribution-total" aria-live="polite" class="text-[#c5c5c9] dark:text-black text-[13px] mb-[12px]">Loading GitHub contributions…</p>
         <div class="overflow-x-auto pb-[6px]" tabindex="0" role="region" aria-label="Daily contributions calendar; scroll to view the full year">
-            <div id="contribution-grid" class="contribution-grid" role="img" aria-label="GitHub contribution calendar" aria-busy="true"></div>
+            <div id="contribution-grid" class="contribution-grid" role="group" aria-label="GitHub contribution calendar" aria-busy="true"></div>
         </div>
         <div class="flex flex-wrap items-center justify-between gap-[8px] mt-[8px] text-[12px] text-[#9d9da7] dark:text-[#575760]">
-            <a href="https://github.com/mukunddmadhavv" target="_blank" rel="noopener noreferrer" class="text-[12px] hover:underline">@mukunddmadhavv ↗</a>
+            <p class="text-[12px]">projects @ <a href="https://github.com/mukunddmadhavv" target="_blank" rel="noopener noreferrer" class="text-[12px] dark:text-black text-[#c5c5c9] hover:underline">github ↗</a></p>
             <div class="flex items-center gap-[4px]" aria-label="Color intensity indicates fewer to more contributions">
                 <span class="mr-[4px]">Less</span>
                 <span class="contribution-day" data-level="0" aria-hidden="true"></span>
@@ -216,13 +228,13 @@
                         <span class="w-[8px] h-[8px] rounded-full bg-[#00d492] shrink-0 mr-[12px]"></span>
                         <span class="shrink-0 group-hover:underline text-[#ec4899]">instagram automation</span>
                         <span class="mx-[10px] hidden md:inline shrink-0">|</span>
-                        <span class="hidden md:inline">20k+ followers & 3m+ views in &lt;3 weeks.</span>
+                        <span class="hidden md:inline">40k+ followers & 6m+ views in 45 days.</span>
                     </div>
                     <div class="shrink-0 md:hidden">
                         <span class="px-[10px] py-[3px] text-[13px] border border-[#00d492]/30 text-[#00d492] rounded-[4px] bg-[#00d492]/10 leading-none">done</span>
                     </div>
                 </div>
-                <span class="text-[#575760] md:hidden ml-[20px] text-[15px] pr-[15px] leading-relaxed">20k+ followers & 3m+ views in &lt;3 weeks.</span>
+                <span class="text-[#575760] md:hidden ml-[20px] text-[15px] pr-[15px] leading-relaxed">40k+ followers & 6m+ views in 45 days.</span>
                 <div class="shrink-0 hidden md:block ml-[10px]">
                     <span class="px-[10px] py-[3px] text-[13px] border border-[#00d492]/30 text-[#00d492] rounded-[4px] bg-[#00d492]/10 leading-none">done</span>
                 </div>
@@ -260,7 +272,40 @@
 
 
     </div>
+    <div id="contribution-tooltip" role="tooltip" hidden></div>
     <script>
+        const contributionTooltip = document.getElementById("contribution-tooltip");
+        let activeContribution = null;
+
+        function hideContributionTooltip() {
+            contributionTooltip.hidden = true;
+            if (activeContribution) activeContribution.removeAttribute("aria-describedby");
+            activeContribution = null;
+        }
+
+        function showContributionTooltip(cell) {
+            hideContributionTooltip();
+            activeContribution = cell;
+            contributionTooltip.textContent = cell.getAttribute("aria-label");
+            contributionTooltip.hidden = false;
+            cell.setAttribute("aria-describedby", "contribution-tooltip");
+            const rect = cell.getBoundingClientRect();
+            const tooltipRect = contributionTooltip.getBoundingClientRect();
+            const left = Math.max(8, Math.min(rect.left + rect.width / 2 - tooltipRect.width / 2, window.innerWidth - tooltipRect.width - 8));
+            const top = rect.top - tooltipRect.height - 8;
+            contributionTooltip.style.left = `${left}px`;
+            contributionTooltip.style.top = `${top < 8 ? rect.bottom + 8 : top}px`;
+        }
+
+        window.addEventListener("scroll", hideContributionTooltip, true);
+        window.addEventListener("resize", hideContributionTooltip);
+        document.addEventListener("pointerdown", (event) => {
+            if (!event.target.closest("#contribution-grid button")) hideContributionTooltip();
+        });
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") hideContributionTooltip();
+        });
+
         async function loadContributions() {
             const total = document.getElementById("contribution-total");
             const grid = document.getElementById("contribution-grid");
@@ -287,10 +332,16 @@
                 }
 
                 for (const day of days) {
-                    const cell = document.createElement("span");
+                    const cell = document.createElement("button");
+                    cell.type = "button";
                     cell.className = "contribution-day";
                     cell.dataset.level = Math.max(0, Math.min(4, day.level));
-                    cell.title = `${day.count} contribution${day.count === 1 ? "" : "s"} on ${day.date}`;
+                    cell.setAttribute("aria-label", `${day.count} contribution${day.count === 1 ? "" : "s"} on ${day.date}`);
+                    cell.addEventListener("pointerenter", () => showContributionTooltip(cell));
+                    cell.addEventListener("pointerleave", hideContributionTooltip);
+                    cell.addEventListener("focus", () => showContributionTooltip(cell));
+                    cell.addEventListener("blur", hideContributionTooltip);
+                    cell.addEventListener("click", () => showContributionTooltip(cell));
                     cells.appendChild(cell);
                 }
 
