@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,6 +30,15 @@
     a {
         font-size: 15px;
         line-height: 30px;
+    }
+
+    .link-arrow {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin-left: 4px;
+        flex-shrink: 0;
+        vertical-align: middle;
     }
 
     .contribution-grid {
@@ -149,7 +159,7 @@
             <div id="contribution-grid" class="contribution-grid" role="group" aria-label="GitHub contribution calendar" aria-busy="true"></div>
         </div>
         <div class="flex flex-wrap items-center justify-between gap-[8px] mt-[8px] text-[12px] text-[#9d9da7] dark:text-[#575760]">
-            <p class="text-[12px]">projects @ <a href="https://github.com/mukunddmadhavv" target="_blank" rel="noopener noreferrer" class="text-[12px] dark:text-black text-[#c5c5c9] hover:underline">github ↗</a></p>
+            <p class="text-[12px]">projects @ <a href="https://github.com/mukunddmadhavv" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-[12px] dark:text-black text-[#c5c5c9] hover:underline">github<svg class="link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg></a></p>
             <div class="flex items-center gap-[4px]" aria-label="Color intensity indicates fewer to more contributions">
                 <span class="mr-[4px]">Less</span>
                 <span class="contribution-day" data-level="0" aria-hidden="true"></span>
@@ -167,10 +177,48 @@
         <p class="text-[#575760] mb-[15px] tracking-widest text-[13px] uppercase">Recent Projects</p>
         
         <div class="flex flex-col gap-[20px] md:gap-[12px]">
-            <a href="https://trypitch.co" target="_blank" class="flex flex-col group gap-[4px] md:gap-0 md:flex-row md:items-center justify-between">
+            <a href="https://guahva.com" target="_blank" rel="noopener noreferrer" class="flex flex-col group gap-[4px] md:gap-0 md:flex-row md:items-center justify-between">
                 <div class="flex flex-row items-center justify-between w-full md:w-auto text-[15px] text-[#575760]">
                     <div class="flex flex-row items-center">
                         <span class="w-[30px] shrink-0 hidden md:inline-block">01</span>
+                        <img src="./assets/project-logos/guahva.png" alt="" width="20" height="20" class="w-[20px] h-[20px] object-contain rounded-[4px] shrink-0 mr-[12px] bg-[#b9eba5] p-[2px]">
+                        <span class="shrink-0 group-hover:underline text-[#b9eba5] dark:text-[#1f6b33]">guahva</span>
+                        <span class="mx-[10px] hidden md:inline shrink-0">|</span>
+                        <span class="hidden md:inline">creator onboarding, campaigns &amp; analytics.</span>
+                    </div>
+                    <div class="shrink-0 md:hidden">
+                        <span class="px-[10px] py-[3px] text-[13px] border border-[#b9eba5]/30 text-[#b9eba5] dark:text-[#1f6b33] dark:border-[#1f6b33]/30 rounded-[4px] bg-[#b9eba5]/10 leading-none">building</span>
+                    </div>
+                </div>
+                <span class="text-[#575760] md:hidden ml-[32px] text-[15px] pr-[15px] leading-relaxed">creator onboarding, campaigns &amp; analytics.</span>
+                <div class="shrink-0 hidden md:block ml-[10px]">
+                    <span class="px-[10px] py-[3px] text-[13px] border border-[#b9eba5]/30 text-[#b9eba5] dark:text-[#1f6b33] dark:border-[#1f6b33]/30 rounded-[4px] bg-[#b9eba5]/10 leading-none">building</span>
+                </div>
+            </a>
+
+            <a href="https://manul.si" target="_blank" rel="noopener noreferrer" class="flex flex-col group gap-[4px] md:gap-0 md:flex-row md:items-center justify-between">
+                <div class="flex flex-row items-center justify-between w-full md:w-auto text-[15px] text-[#575760]">
+                    <div class="flex flex-row items-center">
+                        <span class="w-[30px] shrink-0 hidden md:inline-block">02</span>
+                        <img src="./assets/project-logos/manul.png" alt="" width="20" height="20" class="w-[20px] h-[20px] object-contain rounded-[4px] shrink-0 mr-[12px]">
+                        <span class="shrink-0 group-hover:underline text-[#f2a541] dark:text-[#c06f12]">manul</span>
+                        <span class="mx-[10px] hidden md:inline shrink-0">|</span>
+                        <span class="hidden md:inline">a local AI video editor you talk to.</span>
+                    </div>
+                    <div class="shrink-0 md:hidden">
+                        <span class="px-[10px] py-[3px] text-[13px] border border-[#f2a541]/30 text-[#f2a541] dark:text-[#c06f12] dark:border-[#c06f12]/30 rounded-[4px] bg-[#f2a541]/10 leading-none">building</span>
+                    </div>
+                </div>
+                <span class="text-[#575760] md:hidden ml-[32px] text-[15px] pr-[15px] leading-relaxed">a local AI video editor you talk to.</span>
+                <div class="shrink-0 hidden md:block ml-[10px]">
+                    <span class="px-[10px] py-[3px] text-[13px] border border-[#f2a541]/30 text-[#f2a541] dark:text-[#c06f12] dark:border-[#c06f12]/30 rounded-[4px] bg-[#f2a541]/10 leading-none">building</span>
+                </div>
+            </a>
+
+            <a href="https://trypitch.co" target="_blank" class="flex flex-col group gap-[4px] md:gap-0 md:flex-row md:items-center justify-between">
+                <div class="flex flex-row items-center justify-between w-full md:w-auto text-[15px] text-[#575760]">
+                    <div class="flex flex-row items-center">
+                        <span class="w-[30px] shrink-0 hidden md:inline-block">03</span>
                         <img src="./assets/project-logos/trypitch.svg" alt="" width="20" height="20" class="w-[20px] h-[20px] object-contain rounded-[4px] shrink-0 mr-[12px]">
                         <span class="shrink-0 group-hover:underline text-[#3b82f6]">trypitch.co</span>
                         <span class="mx-[10px] hidden md:inline shrink-0">|</span>
@@ -189,9 +237,9 @@
             <a href="https://leeter.site" target="_blank" rel="noopener noreferrer" class="flex flex-col group gap-[4px] md:gap-0 md:flex-row md:items-center justify-between">
                 <div class="flex flex-row items-center justify-between w-full md:w-auto text-[15px] text-[#575760]">
                     <div class="flex flex-row items-center">
-                        <span class="w-[30px] shrink-0 hidden md:inline-block">02</span>
+                        <span class="w-[30px] shrink-0 hidden md:inline-block">04</span>
                         <img src="./assets/project-logos/leeter.png" alt="" width="20" height="20" class="w-[20px] h-[20px] object-contain rounded-[4px] shrink-0 mr-[12px]">
-                        <span class="shrink-0 group-hover:underline text-[#f59e0b]">leeter.site</span>
+                        <span class="shrink-0 group-hover:underline text-[#22d3ee] dark:text-[#0e7490]">leeter.site</span>
                         <span class="mx-[10px] hidden md:inline shrink-0">|</span>
                         <span class="hidden md:inline">compete with your college on LeetCode.</span>
                     </div>
@@ -208,7 +256,7 @@
             <a href="https://latents.in" target="_blank" class="flex flex-col group gap-[4px] md:gap-0 md:flex-row md:items-center justify-between">
                 <div class="flex flex-row items-center justify-between w-full md:w-auto text-[15px] text-[#575760]">
                     <div class="flex flex-row items-center">
-                        <span class="w-[30px] shrink-0 hidden md:inline-block">03</span>
+                        <span class="w-[30px] shrink-0 hidden md:inline-block">05</span>
                         <img src="./assets/project-logos/latents.webp" alt="" width="20" height="20" class="w-[20px] h-[20px] object-contain rounded-[4px] shrink-0 mr-[12px]">
                         <span class="shrink-0 group-hover:underline text-[#886cd3]">latents.in</span>
                         <span class="mx-[10px] hidden md:inline shrink-0">|</span>
@@ -227,7 +275,7 @@
             <a href="https://instagram.com/trypitch.co" target="_blank" class="flex flex-col group gap-[4px] md:gap-0 md:flex-row md:items-center justify-between">
                 <div class="flex flex-row items-center justify-between w-full md:w-auto text-[15px] text-[#575760]">
                     <div class="flex flex-row items-center">
-                        <span class="w-[30px] shrink-0 hidden md:inline-block">04</span>
+                        <span class="w-[30px] shrink-0 hidden md:inline-block">06</span>
                         <img src="./assets/project-logos/instagram.png" alt="" width="20" height="20" class="w-[20px] h-[20px] object-contain rounded-[4px] shrink-0 mr-[12px]">
                         <span class="shrink-0 group-hover:underline text-[#ec4899]">instagram automation</span>
                         <span class="mx-[10px] hidden md:inline shrink-0">|</span>
@@ -246,31 +294,28 @@
     </div>
 
     <div class="flex flex-wrap flex-col md:flex-row mt-[10px] ml-[15px] md:ml-[0px] mr-[15px] md:mr-0 mb-[30px] gap-[10px] md:gap-0">
-        <a href="mailto:mukunddmadhavv@gmail.com">
-            <button class="flex flex-row ">
-                <p class="text-[#575760]">[e]</p>
-                <p class="dark:text-[black] dark:hover:text-[#c5c5c9] text-[#c5c5c9] ml-[5px] hover:text-white">email
-                </p>
-                <p class="text-[#575760]">↗</p>
-            </button>
+        <a href="mailto:mukunddmadhavv@gmail.com" class="flex flex-row items-center">
+            <span class="text-[#575760]">[e]</span>
+            <span class="dark:text-[black] dark:hover:text-[#c5c5c9] text-[#c5c5c9] ml-[5px] hover:text-white">email</span>
+            <svg class="link-arrow text-[#575760]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg>
         </a>
 
-        <a href="https://x.com/mukunddmadhavv" target="_blank" class="flex flex-row ">
-            <p class="text-[#575760] md:ml-[40px] ">[x]</p>
-            <p class="dark:text-[black] dark:hover:text-[#c5c5c9] text-[#c5c5c9] ml-[5px] hover:text-white">x</p>
-            <p class="text-[#575760]">↗</p>
+        <a href="https://x.com/mukunddmadhavv" target="_blank" rel="noopener noreferrer" class="flex flex-row items-center">
+            <span class="text-[#575760] md:ml-[40px]">[x]</span>
+            <span class="dark:text-[black] dark:hover:text-[#c5c5c9] text-[#c5c5c9] ml-[5px] hover:text-white">x</span>
+            <svg class="link-arrow text-[#575760]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg>
         </a>
 
-        <a href="https://www.linkedin.com/in/mukund-madhav-tiwari" target="_blank" class="flex flex-row ">
-            <p class="text-[#575760] md:ml-[40px]">[l]</p>
-            <p class="dark:text-[black] dark:hover:text-[#c5c5c9] text-[#c5c5c9] ml-[5px] hover:text-white">linkedin</p>
-            <p class="text-[#575760]">↗</p>
+        <a href="https://www.linkedin.com/in/mukund-madhav-tiwari" target="_blank" rel="noopener noreferrer" class="flex flex-row items-center">
+            <span class="text-[#575760] md:ml-[40px]">[l]</span>
+            <span class="dark:text-[black] dark:hover:text-[#c5c5c9] text-[#c5c5c9] ml-[5px] hover:text-white">linkedin</span>
+            <svg class="link-arrow text-[#575760]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg>
         </a>
 
-        <a href="https://leetcode.com/mukunddmadhavv" target="_blank" class="flex flex-row ">
-            <p class="text-[#575760] md:ml-[40px]">[c]</p>
-            <p class="dark:text-[black] dark:hover:text-[#c5c5c9] text-[#c5c5c9] ml-[5px] hover:text-white">leetcode</p>
-            <p class="text-[#575760]">↗</p>
+        <a href="https://leetcode.com/mukunddmadhavv" target="_blank" rel="noopener noreferrer" class="flex flex-row items-center">
+            <span class="text-[#575760] md:ml-[40px]">[c]</span>
+            <span class="dark:text-[black] dark:hover:text-[#c5c5c9] text-[#c5c5c9] ml-[5px] hover:text-white">leetcode</span>
+            <svg class="link-arrow text-[#575760]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10" /></svg>
         </a>
 
 
